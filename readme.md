@@ -23,4 +23,4 @@ console.log(Calc.toJAPANESE_YEN(res))
 
 # 環境
 * [Node.js](https://nodejs.org/ja/) `(v13.6.0)`
-* Windows 10 `(1909)`
+* Windows 10 `(v1909)`
