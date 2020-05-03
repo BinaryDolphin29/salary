@@ -16,9 +16,8 @@ const salary = new Calc([
     }
 ])
 
-const res = salary.calc()
-
-console.log(Calc.toJAPANESE_YEN(res))
+const res = salary.Calc()
+console.log(Calc.ToJAPANESE_YEN(res))
 ```
 
 # 環境
