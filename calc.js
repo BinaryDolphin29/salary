@@ -14,7 +14,8 @@ module.exports = class {
    *  }
    * ]) */
   constructor(data) {
-    if (!data instanceof Array && !data.filter(v => v instanceof Object).length >= 1) {
+    if (!Array.isArray(data) && !data.filter(v => v instanceof Object).length >= 1) {
+      console.log("aa")
       throw new TypeError("引数が無効です。")
     }
 
@@ -34,7 +35,7 @@ module.exports = class {
    * コンストラクタの引数をもとに支給額合計を計算します。
    * @returns {Number}
   */
-  calc() {
+  Calc() {
     for (const day of this.data) {
       const { start, end, count } = day
       this.days += count
@@ -58,7 +59,7 @@ module.exports = class {
    * 基礎時給を計算します。
    * @returns {Number}
   */
-  get kisojikyuu() {
+  get Kisojikyuu() {
     return base*this.hours
   }
   
@@ -66,15 +67,15 @@ module.exports = class {
    * 調整給を計算します。
    * @returns {Number}
   */
-  get tyouseikyuu() {
-    return this._res - this.kisojikyuu
+  get Tyouseikyuu() {
+    return this._res - this.Kisojikyuu
   }
 
   /**
    * 通勤手当を計算します。
    * @returns {Number}
   */
-  get tuukinteate() {
+  get Tuukinteate() {
     if (this.days > 16) return 1000
     return Math.round((1000 / 16.99) * this.days)
   }
@@ -84,7 +85,7 @@ module.exports = class {
    * @param {Number} n
    * @returns {String}
    */
-  static toJAPANESE_YEN(n = 0) {
+  static ToJAPANESE_YEN(n = 0) {
     return new Intl.NumberFormat("ja-JP", {
       style: "currency",
       currency: "JPY"
