@@ -21,5 +21,5 @@ console.log(Calc.ToJAPANESE_YEN(res))
 ```
 
 # 環境
-* [Node.js](https://nodejs.org/ja/) `(v13.6.0)`
-* Windows 10 `(v1909)`
+* [Node.js](https://nodejs.org/ja/) `(v14.13.0)`
+* Windows 10 `(20H2)`
