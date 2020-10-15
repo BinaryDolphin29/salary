@@ -15,11 +15,10 @@ module.exports = class {
    * ]) */
   constructor(data) {
     if (!Array.isArray(data) && !data.filter(v => v instanceof Object).length >= 1) {
-      console.log("aa")
       throw new TypeError("引数が無効です。")
     }
 
-    this.base = 964                    // 基本時給 (9:00 ~ 18:00)
+    this.base = 971                    // 基本時給 (9:00 ~ 18:00)
     this.A = (930 + (base - 910)) / 4  // 9:00 以前
     this.B = (1010 + (base - 910)) / 4 // 18:00 ~ 19:00
     this.C = (1040 + (base - 910)) / 4 // 19:00 ~ 20:00
