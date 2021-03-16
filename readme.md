@@ -1,4 +1,4 @@
-自分専用のバイトの給与計算ライブラリ？です。  
+自分専用のバイトの給与計算ライブラリです。  
 
 # Exsample
 ```javascript
@@ -21,5 +21,5 @@ console.log(Calc.ToJAPANESE_YEN(res))
 ```
 
 # 環境
-* [Node.js](https://nodejs.org/ja/) `(v14.13.0)`
-* Windows 10 `(20H2)`
+* [Node.js](https://nodejs.org/ja/) `(v15.9.0)`
+* Windows 10 Home `(21H1)`
