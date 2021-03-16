@@ -19,10 +19,10 @@ module.exports = class {
     }
 
     this.base = 971                    // 基本時給 (9:00 ~ 18:00)
-    this.A = (930 + (base - 910)) / 4  // 9:00 以前
-    this.B = (1010 + (base - 910)) / 4 // 18:00 ~ 19:00
-    this.C = (1040 + (base - 910)) / 4 // 19:00 ~ 20:00
-    this.D = (1080 + (base - 910)) / 4 // 20:00 以降
+    this.A = (930 + (this.base - 910)) / 4  // 9:00 以前
+    this.B = (1010 + (this.base - 910)) / 4 // 18:00 ~ 19:00
+    this.C = (1040 + (this.base - 910)) / 4 // 19:00 ~ 20:00
+    this.D = (1080 + (this.base - 910)) / 4 // 20:00 以降
 
     this.data = data
     this._res = 0
@@ -59,7 +59,7 @@ module.exports = class {
    * @returns {Number}
   */
   get Kisojikyuu() {
-    return base*this.hours
+    return this.base*this.hours
   }
   
   /**
